@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Olayiwola HNG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container" data-testid="test-contact-page">
+        <h1>Contact Us</h1>
+        <p>Have a question or message? Fill out the form below.</p>
+
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input id="name" data-testid="test-contact-name" type="text" required aria-describedby="error-name">
+                <small id="error-name" data-testid="test-contact-error-name" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" data-testid="test-contact-email" type="email" required aria-describedby="error-email">
+                <small id="error-email" data-testid="test-contact-error-email" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input id="subject" data-testid="test-contact-subject" type="text" required
+                    aria-describedby="error-subject">
+                <small id="error-subject" data-testid="test-contact-error-subject" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" data-testid="test-contact-message" rows="5" required
+                    aria-describedby="error-message"></textarea>
+                <small id="error-message" data-testid="test-contact-error-message" class="error"></small>
+            </div>
+
+            <button type="submit" data-testid="test-contact-submit">Send Message</button>
+
+            <p id="success" data-testid="test-contact-success" class="success" hidden>
+                ✅ Message sent successfully!
+            </p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
